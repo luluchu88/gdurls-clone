@@ -6,6 +6,8 @@ tracking, built with Next.js, Postgres (Neon), and deployed on Vercel.
 Create short links, track click activity, manage links from a dashboard,
 and protect admin functionality with simple authentication.
 
+<img src="https://raw.githubusercontent.com/monapdx/gdurls-clone/refs/heads/main/screenshot.png">
+
 ------------------------------------------------------------------------
 
 ## ✨ Features
