@@ -8,6 +8,8 @@ and protect admin functionality with simple authentication.
 
 <img src="https://raw.githubusercontent.com/monapdx/gdurls-clone/refs/heads/main/screenshot.png">
 
+<img src="https://raw.githubusercontent.com/monapdx/gdurls-clone/refs/heads/main/dashboard.png">
+
 ------------------------------------------------------------------------
 
 ## ✨ Features
